@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@bfi/shared-ui": ["packages/shared/ui/src/index.ts"],
+      "@bfi/shared-utils": ["packages/shared/utils/src/index.ts"],
+      "@bfi/shared-config": ["packages/shared/config/src/index.ts"],
+      "@bfi/shared-hooks": ["packages/shared/hooks/src/index.ts"],
+      "@bfi/types": ["packages/shared/types/src/index.ts"],
+      "@bfi/api": ["packages/api/client/src/index.ts"],
+      "@bfi/api-services": ["packages/api/services/src/index.ts"],
+      "@bfi/api-query-hooks": ["packages/api/query-hooks/src/index.ts"],
+      "@bfi/api-types": ["packages/api/types/src/index.ts"],
+      "@bfi/web-ui": ["packages/web/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".next", "build"]
+}

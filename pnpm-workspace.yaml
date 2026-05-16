@@ -1,0 +1,9 @@
+packages:
+  - "apps/*"
+  - "packages/shared/*"
+  - "packages/api/*"
+  - "packages/web/*"
+  - "packages/eslint-config"
+  - "packages/typescript-config"
+allowBuilds:
+  esbuild: false
