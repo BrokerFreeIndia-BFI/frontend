@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 
 const transition = {
   type: "spring",
@@ -107,10 +107,10 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, href, ...rest }: any) => {
+export const HoveredLink = ({ children, href, to, ...rest }: Omit<LinkProps, "to"> & { href?: string; to?: string }) => {
   return (
     <Link
-      to={href || rest.to}
+      to={(href || to || "") as string}
       {...rest}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black "
     >
